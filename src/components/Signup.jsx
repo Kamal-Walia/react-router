@@ -1,11 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useParams, NavLink } from "react-router-dom";
 
 const Signup = () => {
+    const params = useParams();
+    console.log('KW101', params)
     return(
-        <div style={{height:'100vh',  width:'100vh', backgroundColor:'red'}}>Signup
+        <div>Signup
         <p>
+            {params.firstName} {params.lastName} wants to sign up
         <Link to="/">Go To Home </Link>
         </p>
+        <p> <NavLink style={({isActive}) => {
+            return isActive ? {color:'red'} : {color:'red', textDecoration:'overline'}
+        }} to={{
+                pathname:"/Login",
+                search:`?userName=${params.firstName}&lName=${params.lastName}`
+        }}>Go To Login </NavLink></p>
         </div>
     )
 }
