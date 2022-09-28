@@ -9,7 +9,7 @@ const Login = () => {
     const lastName = params.get('lName')
     console.log('KW101',location )
     return(
-        <div>Login 
+        <div> 
             Please Login {userName} {lastName}
         <Link to={`/signup/${name}/${lName}`}>Go to Sign Up </Link>
         

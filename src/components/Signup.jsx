@@ -10,7 +10,7 @@ const Signup = () => {
         <Link to="/">Go To Home </Link>
         </p>
         <p> <NavLink style={({isActive}) => {
-            return isActive ? {color:'red'} : {color:'red', textDecoration:'overline'}
+            return isActive ? {color:'red'} : {color:'green', textDecoration:'overline'}
         }} to={{
                 pathname:"/Login",
                 search:`?userName=${params.firstName}&lName=${params.lastName}`
